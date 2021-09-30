@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head><title>calculator</title></head>
+    <body>
+        <p>First Value</p>
+        <input id="idf" type="text" value=""/>
+        <p>Second Value</p>
+        <input id="ids" type="text" value=""/>
+        <p>Operation:</p>
+        <input id="id1" type="button" onclick="submitAdd()" value="+" /> 
+        <input id="id2" type="button" onclick="submitSub()" value="-" /> 
+        <input id="id3" type="button" onclick="submitMult()" value="*" /> 
+        <p>Result</p>
+        <script>
+            function submitAdd(){
+                let eleFi=document.getElementById("idf")
+                let eleSe=document.getElementById("ids")
+                let result=document.createElement("p")
+                result.innerText=parseInt(eleFi.value)+parseInt(eleSe.value)
+                document.body.append(result)
+            }
+            function submitSub(){
+                let eleFi=document.getElementById("idf")
+                let eleSe=document.getElementById("ids")
+                let result=document.createElement("p")
+                result.innerText=parseInt(eleFi.value) - parseInt(eleSe.value)
+                document.body.append(result)
+            }
+            function submitMult(){
+                let eleFi=document.getElementById("idf")
+                let eleSe=document.getElementById("ids")
+                let result=document.createElement("p")
+                result.innerText=parseInt(eleFi.value) * parseInt(eleSe.value)
+                document.body.append(result)
+            }
+        </script>
+    </body>
+</html>
