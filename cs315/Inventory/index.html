@@ -7,7 +7,7 @@
 
         }
         td,th{
-            padding:5px;
+            padding:10px;
             border:1px solid;
             width:200px
         }
@@ -18,16 +18,16 @@
     </head>
 <body>
 <p>Item Name:</p>
-<input id="idna" type="text" value=""/>
+<input id="idNa" type="text" value=""/>
 <p>Item Catagory:</p>
-<input id="idca" type="text" value=""/>
+<input id="idCa" type="text" value=""/>
 <p>Quantity:</p>
-<input type="text" value=""/>
+<input id="idQu" type="text" value=""/>
 <p>Ratings</p>
 <input type="text" value=""/>
 <br>
 <br>
-<input type="button" onclick="submit()" value="Add"/> 
+<input type="button" onclick="add()" value="Add"/> 
 <br>
 <br>
 <table>
@@ -35,36 +35,53 @@
         <th>Product Name </th>
         <th>Catagory</th>
         <th>Quantity</th>
-        <th> Edit</th>
+        <th>Edit</th>
         <th>Remove</th>
     </tr>
     <tr>
-        <td>Computers</td>
-        <td>Digitals</td>
-        <td>100</td>
-        <td></td>
-        <td></td>
+        <td><lable id="IdFiRo1"></lable></td>
+        <td><lable id="IdFiRo2"></lable></td>
+        <td><lable id="IdFiRo3"></lable></td>
+        <td><input type="button" value="Edit" onclick="edit()"></td>
+        <td><input type="button" value="Remove" onclick="remove()"></td>
     </tr>
     <tr>
-        <td>Magazines</td>
-        <td>Convnience</td>
-        <td>1000</td>
+        <td><lable id="IdSeRo1"></lable></td>
+        <td><lable id="IdSeRo2"></lable></td>
+        <td><lable id="IdSeRo3"></lable></td>
         <td></td>
         <td></td>
 
     </tr>
     <tr>
-        <td>Books</td>
-        <td>Educations</td>
-        <td>20</td>
+        <td><lable id="IdThRo1"></lable></td>
+        <td><lable id="IdThRo2"></lable></td>
+        <td><lable id="IdThRo3"></lable></td>
         <td></td>
         <td></td>
     </tr>
 </table>
 <script>
-    function submit(){
-let element=document.getElemntById("idna")
-elemnet.value
+    function add(){
+let itNaEl=document.getElementById("idNa");
+let fiRoEl1=document.getElementById("IdFiRo1")
+fiRoEl1.innerHTML=itNaEl.value;
+let itCaEl=document.getElementById("idCa");
+let fiRoEl2=document.getElementById("IdFiRo2")
+fiRoEl2.innerHTML=itCaEl.value;
+let itQuEl=document.getElementById("idQu");
+let fiRoEl3=document.getElementById("IdFiRo3")
+fiRoEl3.innerHTML=itQuEl.value;
+
+
+}
+    function edit(){
+let edited=document.createElement("td");
+let editLab1=document.createElement("IdFiRo1");
+editLab1=document.getElementById("IdFiRo1")
+let editLab2=document.createElement("IdFiRo2");
+let editLab3=document.createElement("IdFiRo3");
+
     }
 </script>
 </body>
