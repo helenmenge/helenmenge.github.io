@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <lable>Email</lable>
+        <button onclick="edit()">Edit</button>
+        <button onclick="save()">Save</button>
+        <script>
+            const urlParams=new URLSearchParams(window.location.search);
+            const myParms=urlParams.get('email');
+            console.log(urlParams.get('email'));
+            let lable=document.getElementsByTagName("lable")[0];
+            lable.innerHTML="Here are the  information you entered: email-: "+urlParams.get('email')+" Password: "+urlParams.get('password')+" First-Name: "+urlParams.get('fname')+
+             " Last-Name: "+urlParams.get('lname ')+" gender-male: "+urlParams.get('male')+" gender-female: "+urlParams.get('female')+" I agree: "+ urlParams.get('iAgree');
+
+            function edit(){
+                window.location.href="/Bootstrap/ass2.html";
+            }
+             function save(){
+               alert("Thank you! Your information is saved sucssesfully!");
+                
+             }
+
+            </script>
+    </body>
+</html>
